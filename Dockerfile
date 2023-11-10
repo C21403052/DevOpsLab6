@@ -5,10 +5,10 @@ FROM gcc:latest
 WORKDIR /app
 
 # Copy the source code and Makefile to the container
-COPY . /app
+COPY .. 
 
 # Build the application using make
 RUN make
 
 # Define the command to run the application
-CMD ["./Lab6"]
+CMD ["./Lab6.c"]
