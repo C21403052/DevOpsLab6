@@ -1,0 +1,18 @@
+name: Build
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              name: Clone the git repo
+              run: git clone https://github.com/C21403052/DevOpsLab6.git
+            - name: Build Code
+              run: make
+            - name: Execute
+              run: ./Lab6.c
